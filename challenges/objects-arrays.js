@@ -45,6 +45,8 @@ const velociraptor = {
   period:"Late Cretaceous"
 }
 
+// What was the weight of a tyrannosaurus?
+
 console.log(tyrannosaurus.weight);
 
 // What was the diet of a velociraptor?
@@ -55,7 +57,6 @@ console.log(stegosaurus.length);
 
 // What time period did tyrannosaurus live in?
 console.log(tyrannosaurus.period);
-
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
 
@@ -79,13 +80,11 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 
 /* Request 1: Create a new array called universities that contains all the universities in the graduates array.  
 
-
-
 Once you have the new array created, sort the universities alphabetically and log the result. */
 const universities = [];
 
 graduates.forEach(function (school) {
-  universities.push("university " + `${school.university}`)
+  universities.push("university: " + `${school.university}`)
 
 })
 
@@ -100,7 +99,7 @@ Log the result of your new array. */
 const contactInfo = [];
 
 graduates.filter(studentInfo => {
-    contactInfo.push(`${studentInfo.first_name} ${studentInfo.email}`)
+    contactInfo.push(`"Name: " ${studentInfo.first_name} "Email: " ${studentInfo.email}`)
 })
 console.log(contactInfo);
 
@@ -110,11 +109,11 @@ const uni = [];
 
 graduates.filter(uniInfo => {
 
-  if (uniInfo === "uni") 
-    return uni.push("universities " )
+  if (uniInfo.university.includes("Uni")) 
+    return uni.push("universities: " + uniInfo.university)
 })
 
-console.log(uni.includes())
+console.log(uni)
 
 
 // ==== ADVANCED Array Methods ====
